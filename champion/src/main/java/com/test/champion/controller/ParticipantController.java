@@ -75,8 +75,8 @@ public class ParticipantController {
         // Step 3: Iterate over the groups and init the group table with the groups
         for (int i = 0; i < groups.size(); i++) {
             String groupID = UUID.randomUUID().toString();
-            groupService.saveOrUpdate(new Group(groupID, "group" + (i + 1)));
-            Group savedGroup = groupService.findByID(groupID);
+            Group savedGroup =
+                    groupService.saveOrUpdate(new Group(groupID, "group" + (i + 1)));
 
             for (int j = 0; j < groups.get(i).size(); j++) {
                 log.info("group id is: {}", groups.get(i).get(j));

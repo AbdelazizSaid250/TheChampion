@@ -20,8 +20,8 @@ public class GroupServiceImpl implements GroupService {
     }
 
     @Override
-    public void saveOrUpdate(Group group) {
-        groupRepository.save(group);
+    public Group saveOrUpdate(Group group) {
+        return groupRepository.save(group);
     }
 
     @Override

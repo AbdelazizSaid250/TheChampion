@@ -5,7 +5,7 @@ import com.test.champion.model.Group;
 import java.util.List;
 
 public interface GroupService {
-    void saveOrUpdate(Group group);
+    Group saveOrUpdate(Group group);
 
     List<Group> findAll();
 

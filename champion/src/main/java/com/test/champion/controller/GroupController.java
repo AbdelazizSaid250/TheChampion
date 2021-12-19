@@ -27,9 +27,9 @@ public class GroupController {
         String id = UUID.randomUUID().toString();
         Group group = new Group(id, request.getName());
 
-        groupService.saveOrUpdate(group);
-        log.info("Saved Group is: {}", group);
+        Group savedGroup = groupService.saveOrUpdate(group);
+        log.info("Saved Group is: {}", savedGroup);
 
-        return group;
+        return savedGroup;
     }
 }
