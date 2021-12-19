@@ -34,6 +34,10 @@ public class ParticipantController {
         Participant participant = new Participant(id);
         participant.setName(request.getName());
         participant.setGender(request.getGender());
+        participant.setPlayedMatches(0);
+        participant.setWinMatches(0);
+        participant.setLoseMatches(0);
+        participant.setPoints(0);
 
         participantService.saveOrUpdate(participant);
         log.info("Saved Participant is: {}", participant);
